@@ -25,12 +25,12 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
     inspect: Disk usage: 40 bytes
 
 >>>>>>>> Init cache <<<<<<<<
-Initialized empty Git repository in /tmp/tmp.bNMY11BeGM/.annex-cache/
+Initialized empty Git repository in /tmp/tmp.XIIpe7tjcX/.annex-cache/
 init  ok
 untrust here ok
 
     inspect: 
-    inspect: Disk usage: 25902 bytes
+    inspect: Disk usage: 25901 bytes
 
 >>>>>>>> Make a first copy <<<<<<<<
          This copy will download from external data storage and upload to the cache
@@ -41,19 +41,19 @@ ok
     inspect: + find . '(' -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
     inspect: -rw-r--r-- 1 kousu 105 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
     inspect: 
-    inspect: Disk usage: 11650145 bytes
+    inspect: Disk usage: 11650144 bytes
 
 >>>>>>>> Download from external data hosting (amazon) <<<<<<<<
 get sub-amu01/dwi/sub-amu01_dwi.nii.gz (from amazon...) 
 
-0%    7.62 KiB         28 KiB/s 5m5s7%    635.62 KiB        3 MiB/s 2s  7%    635.62 KiB        1 MiB/s 6s16%   1.39 MiB          3 MiB/s 2s29%   2.5 MiB           5 MiB/s 1s34%   2.85 MiB          4 MiB/s 1s39%   3.31 MiB          4 MiB/s 1s48%   4.11 MiB          4 MiB/s 1s57%   4.84 MiB          4 MiB/s 0s58%   4.9 MiB           4 MiB/s 0s68%   5.73 MiB          4 MiB/s 0s77%   6.56 MiB          4 MiB/s 0s81%   6.85 MiB          4 MiB/s 0s87%   7.38 MiB          4 MiB/s 0s96%   8.12 MiB          4 MiB/s 0s100%  8.49 MiB          4 MiB/s 0s                                                                    (checksum...) ok
+0%    8.41 KiB         27 KiB/s 5m19s6%    550.41 KiB        3 MiB/s 3s   7%    567.41 KiB        1 MiB/s 7s19%   1.6 MiB           5 MiB/s 1s28%   2.41 MiB          4 MiB/s 1s33%   2.8 MiB           4 MiB/s 1s38%   3.23 MiB          4 MiB/s 1s48%   4.04 MiB          4 MiB/s 1s56%   4.77 MiB          4 MiB/s 0s56%   4.79 MiB          4 MiB/s 0s64%   5.43 MiB          3 MiB/s 0s74%   6.27 MiB          4 MiB/s 0s78%   6.63 MiB          4 MiB/s 0s83%   7.08 MiB          4 MiB/s 0s92%   7.84 MiB          4 MiB/s 0s100%  8.49 MiB          4 MiB/s 0s                                                                    (checksum...) ok
 (recording state in git...)
 
     inspect: + find . '(' -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
     inspect: -rw-r--r-- 2 kousu 8901683 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
     inspect: -rw-r--r-- 2 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: 
-    inspect: Disk usage: 20552531 bytes
+    inspect: Disk usage: 20552530 bytes
 
 >>>>>>>> Populating cache <<<<<<<<
 copy sub-amu01/dwi/sub-amu01_dwi.nii.gz (to cache...) 
@@ -64,7 +64,7 @@ copy sub-amu01/dwi/sub-amu01_dwi.nii.gz (to cache...)
     inspect: -r--r--r-- 3 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: -r--r--r-- 3 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: 
-    inspect: Disk usage: 20554678 bytes
+    inspect: Disk usage: 20554736 bytes
 
 >>>>>>>> Make a second copy <<<<<<<<
 init  (scanning for unlocked files...)
@@ -77,7 +77,7 @@ ok
     inspect: -r--r--r-- 3 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: -r--r--r-- 3 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: 
-    inspect: Disk usage: 32178921 bytes
+    inspect: Disk usage: 32178979 bytes
 
 >>>>>>>> Download from internal data hosting cache <<<<<<<<
 get sub-amu01/dwi/sub-amu01_dwi.nii.gz (from cache...) 
@@ -91,6 +91,17 @@ get sub-amu01/dwi/sub-amu01_dwi.nii.gz (from cache...)
     inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: -r--r--r-- 4 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
     inspect: 
-    inspect: Disk usage: 41081367 bytes
+    inspect: Disk usage: 41081425 bytes
 
-/tmp/tmp.bNMY11BeGM
+>>>>>>>> attempt git-annex fix <<<<<<<<
+
+    inspect: + find . '(' -inum 00000 -o -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
+    inspect: -rw-r--r-- 1 kousu 8901683 ./data-multi-subject2/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject2/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: 
+    inspect: Disk usage: 41081425 bytes
+
+/tmp/tmp.XIIpe7tjcX
