@@ -1,0 +1,96 @@
+>>>>>>>> Platform <<<<<<<<
+Linux requiem 5.11.11-arch1-1 #1 SMP PREEMPT Tue, 30 Mar 2021 14:10:17 +0000 x86_64 GNU/Linux
+NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://www.archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+LOGO=archlinux
+git-annex version: 8.20210330-g315a81e3c
+build flags: Assistant Webapp Pairing Inotify DBus DesktopNotify TorrentParser MagicMime Feeds Testsuite S3 WebDAV
+dependency versions: aws-0.22 bloomfilter-2.0.1.0 cryptonite-0.28 DAV-1.3.4 feed-1.3.2.0 ghc-8.10.4 http-client-0.7.6 persistent-sqlite-2.11.1.0 torrent-10000.1.1 uuid-1.3.14 yesod-1.6.1.0
+key/value backends: SHA256E SHA256 SHA512E SHA512 SHA224E SHA224 SHA384E SHA384 SHA3_256E SHA3_256 SHA3_512E SHA3_512 SHA3_224E SHA3_224 SHA3_384E SHA3_384 SKEIN256E SKEIN256 SKEIN512E SKEIN512 BLAKE2B256E BLAKE2B256 BLAKE2B512E BLAKE2B512 BLAKE2B160E BLAKE2B160 BLAKE2B224E BLAKE2B224 BLAKE2B384E BLAKE2B384 BLAKE2BP512E BLAKE2BP512 BLAKE2S256E BLAKE2S256 BLAKE2S160E BLAKE2S160 BLAKE2S224E BLAKE2S224 BLAKE2SP256E BLAKE2SP256 BLAKE2SP224E BLAKE2SP224 SHA1E SHA1 MD5E MD5 WORM URL X*
+remote types: git gcrypt p2p S3 bup directory rsync web bittorrent webdav adb tahoe glacier ddar git-lfs httpalso borg hook external
+operating system: linux x86_64
+supported repository versions: 8
+upgrade supported from repository versions: 0 1 2 3 4 5 6 7
+
+>>>>>>>> Config <<<<<<<<
+
+    inspect: 
+    inspect: Disk usage: 40 bytes
+
+>>>>>>>> Init cache <<<<<<<<
+Initialized empty Git repository in /tmp/tmp.bNMY11BeGM/.annex-cache/
+init  ok
+untrust here ok
+
+    inspect: 
+    inspect: Disk usage: 25902 bytes
+
+>>>>>>>> Make a first copy <<<<<<<<
+         This copy will download from external data storage and upload to the cache
+init  (scanning for unlocked files...)
+(Auto enabling special remote amazon...)
+ok
+
+    inspect: + find . '(' -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
+    inspect: -rw-r--r-- 1 kousu 105 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: 
+    inspect: Disk usage: 11650145 bytes
+
+>>>>>>>> Download from external data hosting (amazon) <<<<<<<<
+get sub-amu01/dwi/sub-amu01_dwi.nii.gz (from amazon...) 
+
+0%    7.62 KiB         28 KiB/s 5m5s7%    635.62 KiB        3 MiB/s 2s  7%    635.62 KiB        1 MiB/s 6s16%   1.39 MiB          3 MiB/s 2s29%   2.5 MiB           5 MiB/s 1s34%   2.85 MiB          4 MiB/s 1s39%   3.31 MiB          4 MiB/s 1s48%   4.11 MiB          4 MiB/s 1s57%   4.84 MiB          4 MiB/s 0s58%   4.9 MiB           4 MiB/s 0s68%   5.73 MiB          4 MiB/s 0s77%   6.56 MiB          4 MiB/s 0s81%   6.85 MiB          4 MiB/s 0s87%   7.38 MiB          4 MiB/s 0s96%   8.12 MiB          4 MiB/s 0s100%  8.49 MiB          4 MiB/s 0s                                                                    (checksum...) ok
+(recording state in git...)
+
+    inspect: + find . '(' -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
+    inspect: -rw-r--r-- 2 kousu 8901683 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -rw-r--r-- 2 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: 
+    inspect: Disk usage: 20552531 bytes
+
+>>>>>>>> Populating cache <<<<<<<<
+copy sub-amu01/dwi/sub-amu01_dwi.nii.gz (to cache...) 
+ok
+
+    inspect: + find . '(' -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
+    inspect: -r--r--r-- 3 kousu 8901683 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 3 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: -r--r--r-- 3 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: 
+    inspect: Disk usage: 20554678 bytes
+
+>>>>>>>> Make a second copy <<<<<<<<
+init  (scanning for unlocked files...)
+(Auto enabling special remote amazon...)
+ok
+
+    inspect: + find . '(' -inum 00000 -o -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
+    inspect: -rw-r--r-- 1 kousu 105 ./data-multi-subject2/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 3 kousu 8901683 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 3 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: -r--r--r-- 3 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: 
+    inspect: Disk usage: 32178921 bytes
+
+>>>>>>>> Download from internal data hosting cache <<<<<<<<
+get sub-amu01/dwi/sub-amu01_dwi.nii.gz (from cache...) 
+ok
+(recording state in git...)
+
+    inspect: + find . '(' -inum 00000 -o -inum 00000 ')' -exec stat -c '%A %h %U %s %n' '{}' ';'
+    inspect: -rw-r--r-- 1 kousu 8901683 ./data-multi-subject2/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject2/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject1/sub-amu01/dwi/sub-amu01_dwi.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./data-multi-subject1/.git/annex/objects/18/9Q/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: -r--r--r-- 4 kousu 8901683 ./.annex-cache/annex/objects/686/8a7/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz/SHA256E-s8901683--cc39b2f0bea6673904d3926dc899f339ac59f5f9a114563fe01b20278b99435d.nii.gz
+    inspect: 
+    inspect: Disk usage: 41081367 bytes
+
+/tmp/tmp.bNMY11BeGM
