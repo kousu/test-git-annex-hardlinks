@@ -146,5 +146,10 @@ echo ">>>>>>>> Download from internal data hosting cache <<<<<<<<"
 
 inspect
 
+echo ">>>>>>>> attempt git-annex fix <<<<<<<<"
+(cd data-multi-subject2; git-annex fix "$FILE")
+
+inspect
+
 
 pwd # DEBUG
