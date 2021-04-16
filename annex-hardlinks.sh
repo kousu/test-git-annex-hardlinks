@@ -141,6 +141,7 @@ git clone -b r20201130 https://github.com/spine-generic/data-multi-subject data-
 inspect
 
 echo ">>>>>>>> Download from internal data hosting cache <<<<<<<<"
+(cd .annex-cache; git config annex.hardlink false)
 (cd data-multi-subject2; git config annex.thin true; git config annex.hardlink false);
 (cd data-multi-subject2; git annex get "$FILE")
 
