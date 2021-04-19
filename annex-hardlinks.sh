@@ -142,9 +142,44 @@ inspect
 
 echo ">>>>>>>> Download from internal data hosting cache <<<<<<<<"
 (cd data-multi-subject2; git config annex.thin true; git config annex.hardlink false);
-(cd data-multi-subject2; git annex get "$FILE")
+
+# temporarily pretend to be a bare repo, to disable the checkout routine
+(cd data-multi-subject2/.git/; git config core.bare true; git remote set-url cache ../../.annex-cache)
+(cd data-multi-subject2/.git; git annex copy --from cache) # hardlink anything that exists in .annex-cache into our .git/annex/objects
+(cd data-multi-subject2/; git config core.bare false; git remote set-url cache ../.annex-cache)
 
 inspect
 
+echo ">>>>>>>> Emulate annex.thin checkout from local .git/annex/objects <<<<<<<<"
+# side-step git-annex entirely, and just make hardlinks ourselves
+# since git-annex copy and git-annex get both insist on doing download+checkout in one step,
+# and git-annex smudge and git-annex fix seem to give up immediately,
+# construct all the hardlinks they *would* construct ourselves.
+
+# for each available annex file
+# find all the annex pointers *to* it
+# annex pointers look like: ''
+# $ cat sub-amu02/dwi/sub-amu02_dwi.nii.gz
+# /annex/objects/SHA256E-s8988723--f0a6e2cb764e14aa239191f7717a2bdb6c54ce51301e794faba48b9aea11cfc9.nii.gz
+# While actual annex files look like:
+# .git/annex/objects/<something>/<something>/SHA256E-s8988723--f0a6e2cb764e14aa239191f7717a2bdb6c54ce51301e794faba48b9aea11cfc9.nii.gz/SHA256E-s8988723--f0a6e2cb764e14aa239191f7717a2bdb6c54ce51301e794faba48b9aea11cfc9.nii.gz
+# so this matches the two up
+(cd data-multi-subject2;
+  find .git/annex/objects/ -type f |
+  while read object; do
+    git grep -l "$(basename "$object")" |
+    while read checkout; do
+      ln -vf "$object" "$checkout"
+    done
+  done
+
+)
+
+inspect
+
+echo ">>>>>>>> Fixup <<<<<<<<"
+(cd data-multi-subject2; git annex get "$FILE")
+
+inspect
 
 pwd # DEBUG
