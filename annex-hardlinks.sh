@@ -143,10 +143,8 @@ inspect
 echo ">>>>>>>> Download from internal data hosting cache <<<<<<<<"
 (cd data-multi-subject2; git config annex.thin true; git config annex.hardlink false);
 
-# temporarily pretend to be a bare repo, to disable the checkout routine
-(cd data-multi-subject2/.git/; git config core.bare true; git remote set-url cache ../../.annex-cache)
-(cd data-multi-subject2/.git; git annex copy --from cache) # hardlink anything that exists in .annex-cache into our .git/annex/objects
-(cd data-multi-subject2/; git config core.bare false; git remote set-url cache ../.annex-cache)
+rm -r data-multi-subject2/.git/annex
+mv .annex-cache/annex data-multi-subject2/.git/annex
 
 inspect
 
@@ -181,5 +179,15 @@ echo ">>>>>>>> Fixup <<<<<<<<"
 (cd data-multi-subject2; git annex get "$FILE")
 
 inspect
+
+echo ">>>>>>>> Emulate getting updated/new files <<<<<<<<"
+(cd data-multi-subject2;
+  git annex get sub-amu02
+
+  ls -l sub-amu02/**/*.nii.gz
+)
+
+inspect
+
 
 pwd # DEBUG
